@@ -15,27 +15,29 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="/index.html">
+                <img src="/img/Untitled.png" alt="Logo" style="width: 50px; height: 50px;">
+            </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/html/about-us.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">We Nxt</a>
+                    <a class="nav-link" href="/html/we-nxt.html">We Nxt</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sermons</a>
                 </li>
             </ul>
             <form class="form-inline ml-auto">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contact Us</button>
+                <a class="btn btn-outline-success my-2 my-sm-0" href="mailto:ministerjohn@pannellministry.org">Contact Us</a>
             </form>
         </div>
     </nav>
@@ -46,7 +48,7 @@
         <p class="lead"><em>"Behold my servant, whom I have chosen; my beloved, in whom my soul is well pleased" (Mathew 12:18)</em></p>
         <hr class="my-4">
         <p></p>
-        <a class="btn btn-primary btn-sm rounded-pill" href="#" role="button">Learn more</a>
+        <a class="btn btn-primary btn-sm rounded-pill" href="/html/about-us.html" role="button">Learn more</a>
         <a class="btn btn-primary btn-sm rounded-pill" href="https://www.paypal.com/donate/?hosted_button_id=FF7BJXE3YME8A" role="button">Help now</a>
     </div>
 
@@ -58,18 +60,33 @@
     <!-- Content Sections -->
     <div class="container">
         <div class="row">
-            <div class="col">
-                <h2>About Us</h2>
-                <p>Minister Pannell brings real-world experience to the table. Minister Pannell served as Chairman of the Board for New Life Transitions organization where they help formerly incarcerated people transition back to society. </p>
-                <a class="btn btn-primary btn-sm rounded-pill" href="/html/about-us.html" role="button">Read more</a>
+            <div class="col-md">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">About Us</h2>
+                        <p class="card-text">Minister Pannell brings real-world experience to the table. Minister Pannell served as Chairman of the Board for New Life Transitions organization where they help formerly incarcerated people transition back to society.</p>
+                        <a href="/html/about-us.html" class="btn btn-primary btn-sm rounded-pill">Read more</a>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <h2>We Nxt</h2>
-                <p>Description of the We Nxt program...</p>
+            <div class="col-md">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">We Nxt</h2>
+                        <p class="card-text">Empowering Tomorrow's Leaders: WeNxt is dedicated to nurturing the potential of disadvantaged youth in Aurora, IL, and nearby areas. Through our comprehensive educational, recreational, and mentorship programs</p>
+                        <a href="/html/we-nxt.html" class="btn btn-primary btn-sm rounded-pill">Read more</a>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <h2>Sermons</h2>
-                <p>Latest sermons and teachings...</p>
+            <div class="col-md">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Sermons</h2>
+                            <p class="card-text">
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=YOUR_PLAYLIST_ID" frameborder="0" allowfullscreen></iframe>
+                            </p>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
@@ -80,7 +97,7 @@
             <div class="card">
                 <h2>Contact Us</h2>
                 <p>John R. Pannell Ministries</p>
-                <p>Email Us At: crpjrp337@gmail.com</p>
+                <p>Email Us At: ministerjohn@pannellministry.org</p>
                 <p>Phone: 630-345-2152</p>
                 <p>525 N Broadway, Aurora IL, PO Box #8406 Aurora IL - 60507</p>
                 <p>Office Hours for Phone Consultation: Tuesdays and Thursdays 8 AM - 5 PM</p>
@@ -95,12 +112,21 @@
 
     <!-- Footer -->
     <footer>
-                       
+        <div class="footer-content">
+            <span id="copyright">&copy; John R. Pannell Ministries</span>
+            <span class="powered-by">Powered by <a href="https://intelligentrock.com" target="_blank">Intelligent Rock</a></span>
+        </div>
     </footer>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const year = new Date().getFullYear();
+            document.getElementById("copyright").textContent = "\u00A9 " + year + " John R. Pannell Ministries";
+        });
+    </script>
+    
 </body>
 </html>
